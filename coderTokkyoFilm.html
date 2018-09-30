@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="./component.css">
     <title>Coder.Tokyo Flim</title>
@@ -14,36 +17,130 @@
     <div class="header">
       <nav class="menu">
         <a href="#" class="logo1">Coder.Tokyo Film</a>
-        <div class="toggle" id="toggle">
+        <div class="toggle" id="toggle1">
           <div class="one"></div>
           <div class="two"></div>
           <div class="three"></div>
         </div>
         <ul class="navbar">
-          <li class="item"><a href="#">PHIM LE</a></li>
-          <li class="item"><a href="#">PHIM BO</a></li>
-          <li class="item"><a href="#">PHIM CHIEU RAP</a></li>
-          <input type="text">
-          <button>Search</button>
+          <li class="item"><a href="#">PHIM LẺ</a></li>
+          <li class="item"><a href="#">PHIM BỘ</a></li>
+          <li class="item"><a href="#">PHIM CHIẾU RẠP</a></li>
+           <li class="item"><a href="#">GIỚI THIỆU</a></li>
+          <form class="form-inline my-2 my-lg-0">
+		      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+		      <button class="btn btn-success my-2 my-sm-0" type="button" style="background: #FF9800">Search</button>
+	    </form>
+
           
-          <li class="item dn"><a href="#">DANG KY</a></li>
-          <li class="item"><a href="#">DANG NHAP</a></li>
+          <li class="item dn" id="login"><a href="#">ĐĂNG NHẬP</a></li>
           
         </ul>
       </nav>
     </div>
     <!-- end-navbar -->
     <div class="wrapper">
+
+    	<div class="maskmenu" id="mask"></div>
       <div class="slider">
         
         
-        
-        <img src="http://imedia.kenhhd.tv/xce8xh5dlwy9/nguoi-kien-va-chien-binh-ong-ant-man-and-the-wasp-2018-6e355e36a8.jpg" alt="New York">
-        
-        
-        
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+			  <ul class="carousel-indicators">
+			    <li data-target="#demo" data-slide-to="0" class="active"></li>
+			    <li data-target="#demo" data-slide-to="1"></li>
+			    <li data-target="#demo" data-slide-to="2"></li>
+			  </ul>
+			  
+			  <!-- The slideshow -->
+			  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <img src="http://imedia.kenhhd.tv/xce8xh5dlwy9/nguoi-kien-va-chien-binh-ong-ant-man-and-the-wasp-2018-6e355e36a8.jpg" alt="Los Angeles" width="1100" height="500">
+			    </div>
+			    <div class="carousel-item">
+			      <img src="http://imedia.kenhhd.tv/xce8xh5dlwy9/nguoi-kien-va-chien-binh-ong-ant-man-and-the-wasp-2018-6e355e36a8.jpg" alt="Chicago" width="1100" height="500">
+			    </div>
+			    <div class="carousel-item">
+			      <img src="http://imedia.kenhhd.tv/xce8xh5dlwy9/nguoi-kien-va-chien-binh-ong-ant-man-and-the-wasp-2018-6e355e36a8.jpg" alt="New York" width="1100" height="500">
+			    </div>
+			  </div>
+			  
+			  <!-- Left and right controls -->
+			  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+			    <span class="carousel-control-prev-icon"></span>
+			  </a>
+			  <a class="carousel-control-next" href="#demo" data-slide="next">
+			    <span class="carousel-control-next-icon"></span>
+			  </a>
+			</div>
+         
       </div>
-      <!-- end-slider -->
+      <!-- end-slie -->
+
+	<div class="register col-md-4">
+		<div class="exit" id="exit"><i class="fas fa-times"></i></div>
+		<div class="title-login">
+			<p id="formdn">Dang Nhap</p>
+			<p id="formdk">Dang Ky</p>
+			<div class="line"></div>
+		</div>
+		<div class="content-register">
+			<form class="form-inline" action="/sinhvien/them" method="post">
+			    <div class="input-group col-md-6">
+			    	<input type="text" name="ten" id="ho" required="required" />
+			    	<label for="ho">Ho</label>
+			    </div>
+			    <div class="input-group col-md-6">
+			    	<input type="text" name="mssv" id="ten" required="required" />
+			    	<label for="ten">Ten</label>
+			    </div>
+			    <div class="input-group col-md-12">
+			    	<input type="text" name="mssv" id="tk" required="required" />
+			    	<label for="tk">Tai Khoan</label>
+			    </div>
+			 	    <div class="input-group col-md-6">
+			    	<input type="text" name="ten" id="mk" required="required" />
+			    	<label for="mk">Mat Khau</label>
+			    </div>
+			    <div class="input-group col-md-6">
+			    	<input type="text" name="mssv" id="mk2" required="required" />
+			    	<label for="mk2">Nhap Lai Mat Khau</label>
+			    </div>
+			        <div class="input-group col-md-6">
+			    	<input type="text" name="ten" id="email" required="required" />
+			    	<label for="email">Email: </label>
+			    </div>
+			    <div class="input-group col-md-6">
+			    	<input type="text" name="mssv" id="dt" required="required" />
+			    	<label for="dt">Dien Thoai</label>
+			    </div>
+
+			    <button class="btn btn-primary col-md-10 ml-4" style="background:#FF9800; font-size:25px;margin:10px 0px">Dang Ky</button>
+
+			</form>
+		</div>
+
+		<div class="content-login">
+			<form class="form-inline" action="/sinhvien/them" method="post">
+			    <div class="input-group col-md-12">
+			    	<input type="text" name="mssv" id="tk1" required="required" />
+			    	<label for="tk1">Tai Khoan</label>
+			    </div>
+			 	    <div class="input-group col-md-12">
+			    	<input type="text" name="ten" id="mk1" required="required" />
+			    	<label for="mk1">Mat Khau</label>
+			    </div>
+			    
+
+			    <button class="btn btn-primary col-md-10 ml-4" style="background:#FF9800; font-size:25px;margin:10px 0px">Dang Nhap</button>
+
+			</form>
+		</div>
+	</div>
+	
+      <!-- end-register -->
       <div class="main">
         <h1 class="title">Coder.Tokyo Flim</h1>
         <div class="wrapper1">
@@ -99,7 +196,7 @@
       </div>
       <!-- end-main -->
       <div class="sidebar">
-        <h3 class="filmle">PHIM LẺ HOT TRONG TUẦN</h3>
+        <h5 class="filmle">PHIM LẺ HOT TRONG TUẦN</h5>
         <div class="container">
           <div class="album-cover">
             <img src="http://image.phimmoi.net/film/6756/poster.thumb.jpg" alt="">
@@ -137,9 +234,53 @@
   </body>
 </html>
 <script>
-var toggle = document.getElementById('toggle');
+var toggle = document.getElementById('toggle1');
 var menu = document.querySelector('.menu .navbar');
+var exit = document.getElementById('exit');
+var formlogin = document.querySelector('.wrapper .register');
+var login = document.getElementById('login');
+var mask = document.getElementById('mask');
+var maskmenu = document.querySelector('.wrapper .maskmenu');
+
+var contentlogin = document.querySelector('.content-login');
+var contentregister = document.querySelector('.content-register');
+
+var formdn = document.getElementById('formdn');
+var formdk = document.getElementById('formdk');
+var line = document.querySelector('.line');
+
 toggle.addEventListener('click',function(){
-menu.classList.toggle('add');
+	menu.classList.toggle('add');
+});
+
+login.addEventListener('click',function(){
+	formlogin.classList.toggle('active-login');
+		maskmenu.classList.toggle('active-mask');
+});
+
+exit.addEventListener('click',function(){
+	formlogin.classList.toggle('active-login');
+	maskmenu.classList.toggle('active-mask');
+});
+mask.addEventListener('click',function(){
+	this.classList.toggle('active-mask');
+	formlogin.classList.toggle('active-login');
+});
+
+formdn.addEventListener('click',function(){
+	contentlogin.classList.remove('hide');
+	contentregister.classList.remove('active1');
+
+	contentlogin.classList.add('active1');
+	contentregister.classList.add('hide');
+	line.classList.toggle('line-right');
+});
+
+formdk.addEventListener('click',function(){
+	contentlogin.classList.remove('active1');
+	contentregister.classList.remove('hide');
+	line.classList.toggle('line-right');
+	contentlogin.classList.add('hide');
+	contentregister.classList.add('active1');
 });
 </script>
