@@ -1,0 +1,184 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+.toggle{
+ position: absolute;
+ right: 15px;
+ display: none;
+  
+}
+.one,.two,.three{
+  height: 5px;
+  margin: 5px 8px;
+  background: #FF9800;
+  transition: 220ms;
+  color: #FF9800;
+}
+.one{
+  width: 30px;
+}
+.two{
+  width:25px;
+}
+.three{
+  width:20px;
+}
+.toggle:hover .two{
+  width: 30px;
+}
+.toggle:hover .three{
+  width: 30px;
+}
+.menu{
+  width: 100%;
+  position: relative;
+  color:#FF9800;
+  background:#101010;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+}
+
+
+.logo1{
+  color: #FF9800;
+   font-family: 'Kaushan Script';
+   font-size: 1.5rem;
+   text-decoration:none;
+
+ 
+   margin: 10px 50px;
+}
+.menu .navbar{
+  display: inline-flex;
+  list-style: none;
+  margin-bottom: 0;
+
+}
+.menu .navbar li{
+    padding: 10px 15px;
+}
+.menu .navbar li a{
+      text-decoration:none;
+      color: #FF9800;
+}
+.menu .navbar li:hover{
+  background: #333;
+  transition: 220ms;
+}
+.navbar .dn{
+	margin-left: 380px;
+}
+
+@media (max-width: 992px){
+  .toggle{
+    display: block;
+     transition: 400ms;
+  }
+  .menu .navbar{
+    display:block;
+    position: absolute;
+    top:100%;
+    margin:0;
+    background: #101010;
+    display:block;
+    width:100%;
+    text-align:center;
+    transform-origin:50% 0%;
+    transition: 400ms ease;
+    transform:scaleY(0);
+  }
+    .navbar.add{
+    transform: scaleY(1);
+  }
+  	.navbar .dn{
+	margin-left: 0px;
+}
+}
+/*end--menu*/
+
+.wrapper1{
+  width: 220px;
+  height: 300px;
+  position: relative;
+    margin: 30px 30px;
+    float:left;
+}
+.overlay{
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+  position: absolute;
+  top:0;
+}
+.overlay i{
+font-size: 80px;
+color: white;
+transform: scale(0);
+transition: 0.5s;
+}
+.wrapper1:hover .overlay{
+  transition: 250ms;
+  opacity: 1;
+}
+.wrapper1:hover .overlay i{
+  transform: scale(1);
+  transition: 0.5s;
+  cursor:pointer;
+}
+.title-film{
+  color:white;
+  position: absolute;
+  bottom:0;
+  z-index:9;
+  font-size: 20px;
+  font-weight:bold;
+  text-align: center;
+}
+.mask{
+  position: absolute;
+  bottom:0;
+  width:100%;
+  height: 70px;
+  background:rgba(0,0,0,0.5);
+}
+.wrapper1 img{
+  width:100%;
+  height: 100%;
+}
+/*end-main*/
+
+.container{
+  display: flex;
+  padding: 10px 10px;
+	color: white;
+  
+}
+.item{
+  margin-left:15px;
+  font-size:15px;
+}
+.item .eng-title{
+  font-size:15px;
+  padding: 10px 0px;
+  color: white;
+}
+.item .view-count{
+  font-size:13px;
+   color: #333;
+}
+
+
+.album-cover img{
+  width:158px;
+  height: 188px;
+  color:white;
+}
